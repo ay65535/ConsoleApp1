@@ -6,8 +6,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            void builder(People people) => people.Name("Tom").Age(12).Hobby("BaseBall");
-            Console.WriteLine(People.Hello(builder));
+            void builder(IecVar iecVar) => iecVar.Name("in_Execute").DataType("BOOL").Comment("Boolean");
+            Console.WriteLine(IecVar.Hello(builder));
         }
     }
 }
