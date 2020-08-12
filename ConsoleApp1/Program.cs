@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -10,6 +6,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            void builder(People people) => people.Name("Tom").Age(12).Hobby("BaseBall");
+            Console.WriteLine(People.Hello(builder));
         }
     }
 }
