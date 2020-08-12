@@ -6,15 +6,12 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            void builder(IecVar iecVar) => iecVar.Name("in_Execute").DataType("BOOL").Comment("Boolean");
-            Console.WriteLine(IecVar.Hello(builder));
-
             // ショートケーキの生成
-            SpongeCake s1 = new ShortCake();
-            SpongeCake s2 = new StrawberryDecorator(s1);
-            SpongeCake s3 = new BananaDecorator(s1);
-            SpongeCake s4 = new StrawberryDecorator(new ShortCake());
-            SpongeCake s5 = new StrawberryDecorator(new BananaDecorator(new ShortCake()));
+            IecVar s1 = new IecGlobalVar();
+            IecVar s2 = new OrderDecorator(s1);
+            IecVar s3 = new ATDecorator(s1);
+            IecVar s4 = new OrderDecorator(new IecGlobalVar());
+            IecVar s5 = new OrderDecorator(new ATDecorator(new IecGlobalVar()));
             s1.show();
             s2.show();
             s3.show();
@@ -22,11 +19,11 @@ namespace ConsoleApp1
             s5.show();
             Console.WriteLine("--------------------------------------------");
             // チョコレートケーキの生成
-            SpongeCake c1 = new ChocolateCake();
-            SpongeCake c2 = new StrawberryDecorator(c1);
-            SpongeCake c3 = new BananaDecorator(c1);
-            SpongeCake c4 = new StrawberryDecorator(new ChocolateCake());
-            SpongeCake c5 = new StrawberryDecorator(new BananaDecorator(new ChocolateCake()));
+            IecVar c1 = new IecInOutVar();
+            IecVar c2 = new OrderDecorator(c1);
+            IecVar c3 = new ATDecorator(c1);
+            IecVar c4 = new OrderDecorator(new IecInOutVar());
+            IecVar c5 = new OrderDecorator(new ATDecorator(new IecInOutVar()));
             c1.show();
             c2.show();
             c3.show();

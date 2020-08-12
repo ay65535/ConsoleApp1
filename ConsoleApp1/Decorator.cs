@@ -1,9 +1,12 @@
-public abstract class Decorator : SpongeCake
+namespace ConsoleApp1
 {
-    protected SpongeCake spongeCake; // この飾り枠がくるんでいる「中身」を指す
+    public abstract class Decorator : IecVar
+    {
+        protected IecVar iecVar; // この飾り枠がくるんでいる「中身」を指す
 
-    protected Decorator(SpongeCake spongeCake)
-    { // インスタンス生成時に「中身」を引数で指定
-        this.spongeCake = spongeCake;
+        protected Decorator(IecVar iecVar)
+        { // インスタンス生成時に「中身」を引数で指定
+            this.iecVar = iecVar;
+        }
     }
 }

@@ -2,10 +2,16 @@ using System;
 
 namespace ConsoleApp1
 {
-    class IecVar
+    public abstract class IecVar
     {
-        private IecVar()
-        {
+
+        public abstract string getName(); // 名前を得る
+
+        public abstract int getPrice(); // 価格を得る
+
+        public void show()
+        { // 名前と価格を表示する
+            Console.WriteLine(getName() + ":" + getPrice() + "円");
         }
 
         private string N;
@@ -26,13 +32,6 @@ namespace ConsoleApp1
         {
             this.Com = comment;
             return this;
-        }
-
-        public static string Hello(Action<IecVar> builder)
-        {
-            IecVar iecVar = new IecVar();
-            builder.Invoke(iecVar);
-            return $"{iecVar.N}: {iecVar.D};  // {iecVar.Com}";
         }
     }
 }
