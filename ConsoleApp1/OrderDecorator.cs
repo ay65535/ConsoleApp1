@@ -2,7 +2,7 @@ namespace ConsoleApp1
 {
     public class OrderDecorator : Decorator
     {
-        public OrderDecorator(IecVar iecVar) : base(iecVar)
+        public OrderDecorator(IecDefaultVar iecVar) : base(iecVar)
         { // コンストラクタで飾り付けの対象を渡す
         }
 

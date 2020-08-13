@@ -7,11 +7,11 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             // ショートケーキの生成
-            IecVar s1 = new IecGlobalVar();
-            IecVar s2 = new OrderDecorator(s1);
-            IecVar s3 = new ATDecorator(s1);
-            IecVar s4 = new OrderDecorator(new IecGlobalVar());
-            IecVar s5 = new OrderDecorator(new ATDecorator(new IecGlobalVar()));
+            IecDefaultVar s1 = new IecGlobalVar();
+            IecDefaultVar s2 = new OrderDecorator(s1);
+            IecDefaultVar s3 = new ATDecorator(s1);
+            IecDefaultVar s4 = new OrderDecorator(new IecGlobalVar());
+            IecDefaultVar s5 = new OrderDecorator(new ATDecorator(new IecGlobalVar()));
             s1.show();
             s2.show();
             s3.show();
@@ -19,11 +19,11 @@ namespace ConsoleApp1
             s5.show();
             Console.WriteLine("--------------------------------------------");
             // チョコレートケーキの生成
-            IecVar c1 = new IecInOutVar();
-            IecVar c2 = new OrderDecorator(c1);
-            IecVar c3 = new ATDecorator(c1);
-            IecVar c4 = new OrderDecorator(new IecInOutVar());
-            IecVar c5 = new OrderDecorator(new ATDecorator(new IecInOutVar()));
+            IecDefaultVar c1 = new IecInOutVar();
+            IecDefaultVar c2 = new OrderDecorator(c1);
+            IecDefaultVar c3 = new ATDecorator(c1);
+            IecDefaultVar c4 = new OrderDecorator(new IecInOutVar());
+            IecDefaultVar c5 = new OrderDecorator(new ATDecorator(new IecInOutVar()));
             c1.show();
             c2.show();
             c3.show();

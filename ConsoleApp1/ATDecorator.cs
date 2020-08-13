@@ -3,7 +3,7 @@ namespace ConsoleApp1
     public class ATDecorator : Decorator
     {
 
-        public ATDecorator(IecVar iecVar) : base(iecVar)
+        public ATDecorator(IecDefaultVar iecVar) : base(iecVar)
         { // コンストラクタで飾り付けの対象を渡す
         }
 

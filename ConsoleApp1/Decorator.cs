@@ -1,10 +1,10 @@
 namespace ConsoleApp1
 {
-    public abstract class Decorator : IecVar
+    public abstract class Decorator : IecDefaultVar
     {
-        protected IecVar iecVar; // この飾り枠がくるんでいる「中身」を指す
+        protected IecDefaultVar iecVar; // この飾り枠がくるんでいる「中身」を指す
 
-        protected Decorator(IecVar iecVar)
+        protected Decorator(IecDefaultVar iecVar)
         { // インスタンス生成時に「中身」を引数で指定
             this.iecVar = iecVar;
         }

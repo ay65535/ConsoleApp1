@@ -1,6 +1,6 @@
 namespace ConsoleApp1
 {
-    public class IecInOutVar : IecVar
+    public class IecInOutVar : IecDefaultVar
     {
 
         public override string getName()
